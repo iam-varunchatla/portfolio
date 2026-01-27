@@ -100,44 +100,16 @@ const Hero = () => {
         </motion.div>
 
         {/* Right: Image */}
-        <motion.div
-          initial={{ opacity: 0, x: 20 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ delay: 0.3 }}
-          className="relative flex justify-center perspective"
-        >
-          <style>{`
-            @keyframes zoomFromBottom {
-              0% {
-                transform: scaleY(1);
-                transform-origin: bottom center;
-              }
-              50% {
-                transform: scaleY(1.05);
-                transform-origin: bottom center;
-              }
-              100% {
-                transform: scaleY(1);
-                transform-origin: bottom center;
-              }
-            }
-            .zoom-image {
-              animation: zoomFromBottom 4s ease-in-out infinite;
-            }
-          `}</style>
-          <div className="relative rounded-3xl overflow-hidden border-2 border-gray-300/60 bg-white shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:scale-105 card-3d"
-            style={{
-              perspective: '1200px',
-              transformStyle: 'preserve-3d'
-            }}>
+        <div className="relative flex justify-center">
+          <div className="relative rounded-3xl overflow-hidden border-2 border-white bg-white shadow-xl">
             <img
               src={`${import.meta.env.BASE_URL}profile.jpg`}
               alt="Varun Chatla - Cloud DevOps & MLOps Engineer"
-              className="w-full h-full max-h-[520px] object-cover relative z-10 zoom-image"
+              className="w-full h-full max-h-[520px] object-cover"
               loading="lazy"
             />
           </div>
-        </motion.div>
+        </div>
       </div>
     </section>
   )
