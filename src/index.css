@@ -1,0 +1,95 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', system-ui, sans-serif;
+  background: linear-gradient(135deg, #ffffff 0%, #e8f4ff 50%, #f0f8ff 100%);
+  color: #1a1a1a;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* Subtle hero wave background */
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient( circle at 10% 10%, rgba(0,102,204,0.04) 0%, rgba(0,102,204,0) 60%),
+                    radial-gradient( circle at 90% 20%, rgba(0,102,204,0.03) 0%, rgba(0,102,204,0) 60% );
+  pointer-events: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f5f5f5;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #0066cc;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #0052a3;
+}
+
+/* Selection */
+::selection {
+  background-color: #0066cc;
+  color: #ffffff;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.6s ease-out;
+}
+
+/* Fancy hover utilities */
+.hover-card:hover {
+  transform: translateY(-8px) rotateX(5deg);
+  box-shadow: 0 20px 40px rgba(0,102,204,0.15), 0 0 60px rgba(0,102,204,0.1);
+}
+
+.glow-border {
+  box-shadow: 0 0 0 2px rgba(0,102,204,0.3), inset 0 0 20px rgba(0,102,204,0.05);
+}
+
+/* 3D perspective utilities */
+.perspective {
+  perspective: 1200px;
+  transform-style: preserve-3d;
+}
+
+.card-3d {
+  transform-style: preserve-3d;
+  transition: transform 0.6s cubic-bezier(0.23, 1, 0.320, 1);
+}
+
+.card-3d:hover {
+  transform: rotateY(5deg) rotateX(-8deg) translateZ(20px);
+}
