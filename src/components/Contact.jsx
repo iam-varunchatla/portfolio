@@ -9,7 +9,9 @@ const Contact = () => {
   })
 
   return (
-    <section id="contact" className="py-20 px-4 sm:px-6 lg:px-8 bg-primary">
+    <section id="contact" className="py-20 px-4 sm:px-6 lg:px-8" style={{
+      background: 'linear-gradient(135deg, #ffffff 0%, #e8f4ff 50%, #f0f8ff 100%)'
+    }}>
       <div className="max-w-4xl mx-auto">
         <motion.div
           ref={ref}

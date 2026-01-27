@@ -106,19 +106,17 @@ const Hero = () => {
           transition={{ delay: 0.3 }}
           className="relative flex justify-center perspective"
         >
-          <div className="relative rounded-2xl overflow-hidden border-2 border-accent/40 bg-gradient-to-br from-blue-100 to-white shadow-2xl hover:shadow-3xl transition-all duration-500 transform hover:scale-110 hover:-rotate-2 card-3d"
+          <div className="relative rounded-3xl overflow-hidden border-2 border-gray-300/60 bg-white shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:scale-105 card-3d"
             style={{
               perspective: '1200px',
               transformStyle: 'preserve-3d'
             }}>
-            <div className="absolute inset-0 bg-gradient-to-tr from-accent/10 via-transparent to-white/20 pointer-events-none"></div>
             <img
               src="/profile.jpg"
               alt="Varun Chatla - Cloud DevOps & MLOps Engineer"
-              className="w-full h-full max-h-[520px] object-cover relative z-10 hover:scale-105 transition-transform duration-500"
+              className="w-full h-full max-h-[520px] object-cover relative z-10"
               loading="lazy"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent pointer-events-none"></div>
           </div>
         </motion.div>
       </div>

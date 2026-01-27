@@ -94,7 +94,9 @@ const Skills = () => {
   }
 
   return (
-    <section id="skills" className="py-20 px-4 sm:px-6 lg:px-8 bg-secondary">
+    <section id="skills" className="py-20 px-4 sm:px-6 lg:px-8" style={{
+      background: 'linear-gradient(135deg, #ffffff 0%, #e8f4ff 50%, #f0f8ff 100%)'
+    }}>
       <div className="max-w-7xl mx-auto">
         <motion.div
           ref={ref}

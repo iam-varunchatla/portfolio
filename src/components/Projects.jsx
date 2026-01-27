@@ -1,6 +1,5 @@
 import { motion } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
-import { FiGithub, FiExternalLink } from 'react-icons/fi'
 
 const Projects = () => {
   const [ref, inView] = useInView({
@@ -17,9 +16,7 @@ const Projects = () => {
         'Automated daily model retraining with drift detection',
         'Reduced deployment time from 2 weeks to 2 hours',
         '99.9% model serving availability'
-      ],
-      github: '#',
-      demo: '#'
+      ]
     },
     {
       title: 'Multi-Cloud Infrastructure Automation',
@@ -29,9 +26,7 @@ const Projects = () => {
         'Reduced environment setup time by 90%',
         'Eliminated manual configuration drift',
         '100% reproducible infrastructure deployments'
-      ],
-      github: '#',
-      demo: '#'
+      ]
     },
     {
       title: 'CI/CD Pipeline for Data Science Teams',
@@ -41,9 +36,7 @@ const Projects = () => {
         'Reduced bugs reaching production by 85%',
         'Automated testing for ML model accuracy and performance',
         'Integrated with Slack for real-time notifications'
-      ],
-      github: '#',
-      demo: '#'
+      ]
     },
     {
       title: 'Real-Time Log Analytics Platform',
@@ -53,9 +46,7 @@ const Projects = () => {
         'Processes 10M+ events daily',
         'Real-time anomaly detection',
         'Custom dashboards for different teams'
-      ],
-      github: '#',
-      demo: '#'
+      ]
     },
     {
       title: 'Serverless Microservices Architecture',
@@ -65,14 +56,14 @@ const Projects = () => {
         '60% reduction in operational costs',
         'Auto-scaling based on demand',
         '99.99% uptime SLA achieved'
-      ],
-      github: '#',
-      demo: '#'
+      ]
     }
   ]
 
   return (
-    <section id="projects" className="py-20 px-4 sm:px-6 lg:px-8 bg-primary">
+    <section id="projects" className="py-20 px-4 sm:px-6 lg:px-8" style={{
+      background: 'linear-gradient(135deg, #ffffff 0%, #e8f4ff 50%, #f0f8ff 100%)'
+    }}>
       <div className="max-w-6xl mx-auto">
         <motion.div
           ref={ref}
@@ -93,17 +84,7 @@ const Projects = () => {
                 transition={{ delay: index * 0.12, duration: 0.8, ease: 'easeOut' }}
                 className="bg-gradient-to-br from-white via-blue-50 to-white p-6 rounded-xl border-2 border-accent/30 hover:border-accent/60 transition-all duration-500 shadow-lg hover:shadow-2xl transform hover:translate-y-[-8px] hover:scale-[1.03] card-3d"
               >
-                <div className="flex flex-wrap items-start justify-between mb-4">
-                  <h3 className="text-xl font-semibold text-text mb-2">{project.title}</h3>
-                  <div className="flex gap-4">
-                    <a href={project.github} className="text-text hover:text-accent transition-colors">
-                      <FiGithub size={20} />
-                    </a>
-                    <a href={project.demo} className="text-text hover:text-accent transition-colors">
-                      <FiExternalLink size={20} />
-                    </a>
-                  </div>
-                </div>
+                <h3 className="text-xl font-semibold text-text mb-4">{project.title}</h3>
 
                 <p className="text-text mb-4">{project.description}</p>
 
