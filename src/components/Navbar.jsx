@@ -64,8 +64,8 @@ const Navbar = () => {
                 </a>
               ))}
               <a
-                href="/resume.pdf"
-                download
+                href={`${import.meta.env.BASE_URL}CHATLA_VARUN_RESUME.pdf`}
+                download="CHATLA_VARUN_RESUME.pdf"
                 className="ml-4 px-4 py-2 rounded border-2 border-accent text-accent font-mono text-sm hover:bg-accent/10 transition-all"
                 aria-label="Download Resume"
               >
@@ -105,8 +105,8 @@ const Navbar = () => {
               </a>
             ))}
             <a
-              href="/resume.pdf"
-              download
+              href={`${import.meta.env.BASE_URL}CHATLA_VARUN_RESUME.pdf`}
+              download="CHATLA_VARUN_RESUME.pdf"
               className="block px-3 py-2 mt-2 text-text hover:text-accent transition-colors font-mono text-sm border-t border-accent/20"
               aria-label="Download Resume"
             >

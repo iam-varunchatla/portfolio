@@ -69,8 +69,8 @@ const Hero = () => {
             className="flex flex-wrap gap-4 mb-12"
           >
             <a
-              href="/resume.pdf"
-              download
+              href={`${import.meta.env.BASE_URL}CHATLA_VARUN_RESUME.pdf`}
+              download="CHATLA_VARUN_RESUME.pdf"
               className="px-8 py-3 rounded-lg bg-accent text-white font-semibold hover:bg-accent/90 transition-all shadow-lg hover:shadow-xl transform hover:scale-105"
               aria-label="Download Resume"
             >
@@ -131,7 +131,7 @@ const Hero = () => {
               transformStyle: 'preserve-3d'
             }}>
             <img
-              src="/profile.jpg"
+              src={`${import.meta.env.BASE_URL}profile.jpg`}
               alt="Varun Chatla - Cloud DevOps & MLOps Engineer"
               className="w-full h-full max-h-[520px] object-cover relative z-10 zoom-image"
               loading="lazy"
